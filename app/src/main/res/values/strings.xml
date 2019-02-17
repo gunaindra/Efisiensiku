@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Efisiensiku</string>
+    <string name="menu_home">Home</string>
+    <string name="menu_akun">Akun</string>
+    <string name="menu_history">History</string>
+    <string name="menu_bantuan">Bantuan</string>
+
+</resources>
