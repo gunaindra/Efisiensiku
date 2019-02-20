@@ -6,10 +6,13 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.TextView;
 
 public class LoginActivity extends AppCompatActivity {
 
     Button btnRegister;
+    TextView tvLewati;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

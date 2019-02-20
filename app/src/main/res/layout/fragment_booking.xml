@@ -17,13 +17,21 @@
             android:background="@color/colorText">
 
             <TextView
+                android:id="@+id/tvDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="Pilih Kota Asal"/>
+
+            <TextView
                 android:id="@+id/tvAsal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="8dp"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                android:text="Pilih Kota Asal"
+                android:textSize="20sp"
+                android:textColor="@color/colorBlack"
+                android:text="Masukan Asal"
                 />
 
             <RelativeLayout
@@ -48,7 +56,7 @@
                     android:layout_alignParentEnd="true"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="0dp"
-                    android:layout_marginEnd="19dp"
+                    android:layout_marginEnd="24dp"
                     android:layout_marginRight="11dp"
                     android:background="@color/colorText"
                     android:src="@drawable/up_and_down" />
@@ -57,14 +65,22 @@
             </RelativeLayout>
 
             <TextView
+                android:id="@+id/tvDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="Pilih Kota Tujuan"/>
+
+            <TextView
                 android:id="@+id/tvAsal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="8dp"
                 android:layout_marginBottom="8dp"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                android:text="Pilih Kota Tujuan"/>
+                android:textSize="20sp"
+                android:textColor="@color/colorBlack"
+                android:text="Masukan Tujuan"/>
 
         </LinearLayout>
 
@@ -88,20 +104,29 @@
                 android:layout_weight=".3">
 
                 <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Pilih Tanggal Perjalanan"/>
+
+                <TextView
                     android:id="@+id/hari"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textSize="18sp"
-                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:paddingLeft="8dp"
+                    android:textColor="@color/colorBlack"
                     android:text="Rabu"/>
 
                 <TextView
                     android:id="@+id/tgl"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textSize="30sp"
-                    android:textStyle="bold"
-                    android:text="5 Februari 2019"/>
+                    android:textSize="20sp"
+                    android:paddingLeft="8dp"
+                    android:text="5 Februari 2019"
+                    android:textColor="@color/colorBlack"/>
             </LinearLayout>
 
             <LinearLayout
@@ -117,8 +142,9 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:textAlignment="center"
-                    android:textSize="24sp"
-                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:textColor="@color/colorBlack"
+                    android:fontFamily="sans-serif-medium"
                     android:text="Hari ini"/>
 
 
@@ -136,14 +162,30 @@
         android:background="@color/colorText"
         android:layout_margin="8dp">
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="Pilih Jam Keberangkatan"/>
+
+
+
         <TextView
             android:id="@+id/tvJam"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="8dp"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:text="Jam Keberangkatan"/>
+            android:paddingLeft="8dp"
+            android:textSize="16sp"
+            android:textColor="@color/colorBlack"
+            android:text="Masukan Jam Keberangkatan"/>
+
+        </LinearLayout>
 
     </android.support.design.card.MaterialCardView>
 
@@ -155,20 +197,34 @@
         android:background="@color/colorText"
         android:layout_margin="8dp">
 
-        <TextView
-            android:id="@+id/tvPenumpang"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="8dp"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:text="Penumpang"/>
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="Pilih Penumpang"/>
+
+            <TextView
+                android:id="@+id/tvPenumpang"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:textSize="16sp"
+                android:textColor="@color/colorBlack"
+                android:text="Masukan Penumpang"/>
+
+        </LinearLayout>
 
     </android.support.design.card.MaterialCardView>
 
     <ImageView
-        android:layout_width="96dp"
-        android:layout_height="96dp"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
         android:layout_below="@id/cvPenumpang"
         android:layout_margin="@dimen/activity_vertical_margin"
         android:layout_centerHorizontal="true"

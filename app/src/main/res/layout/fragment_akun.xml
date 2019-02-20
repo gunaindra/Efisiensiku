@@ -19,7 +19,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="8dp"
-                android:textStyle="bold"
+                android:fontFamily="sans-serif-medium"
                 android:text="Kontak Utama"/>
 
             <View
@@ -45,7 +45,7 @@
                 android:layout_below="@+id/line"
                 android:layout_toEndOf="@id/ivPassenger"
                 android:layout_marginTop="8dp"
-                android:textSize="18sp"
+                android:textSize="20sp"
                 android:textColor="@color/colorPrimary"
                 android:textStyle="bold"
                 android:text="Johny Depp" />
@@ -57,6 +57,7 @@
                 android:layout_below="@+id/tvNama"
                 android:layout_toEndOf="@id/ivPassenger"
                 android:layout_marginTop="8dp"
+                android:textSize="16sp"
                 android:text="johnydepp@gmail.com"/>
 
             <TextView
@@ -65,6 +66,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/tvEmail"
                 android:layout_toEndOf="@id/ivPassenger"
+                android:textSize="16sp"
                 android:text="+628822112434"/>
         </RelativeLayout>
 
@@ -82,11 +84,48 @@
             android:layout_height="wrap_content">
 
             <TextView
-                android:id="@+id/tvPenumpang"
+                android:id="@+id/tvDaftarPenumpang"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="8dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="Penumpang Pendamping"/>
+
+            <View
+                android:id="@+id/lineDaftarPenumpang"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_margin="8dp"
+                android:background="@color/colorBackground"
+                android:layout_below="@+id/tvDaftarPenumpang"/>
+
+            <TextView
+                android:id="@+id/tvPenumpang"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/lineDaftarPenumpang"
+                android:padding="8dp"
+                android:textSize="14sp"
+                android:textColor="@color/colorPrimary"
                 android:text="Achmad"/>
+
+            <View
+                android:id="@+id/lineSeparatorDaftarPenumpang"
+                android:layout_width="3dp"
+                android:layout_height="24dp"
+                android:layout_toStartOf="@id/ivDeletePenumpang"
+                android:layout_below="@id/lineDaftarPenumpang"
+                android:layout_marginEnd="8dp"
+                android:background="@color/colorBackground" />
+
+            <ImageView
+                android:id="@+id/ivDeletePenumpang"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/garbage"
+                android:layout_marginEnd="16dp"
+                android:layout_alignEnd="@id/tvPenumpang"
+                android:layout_below="@id/lineDaftarPenumpang"/>
         </RelativeLayout>
 
     </android.support.design.card.MaterialCardView>
