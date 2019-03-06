@@ -22,7 +22,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".HomeActivity"></activity>
-        <activity android:name=".util.RegisterPenumpang"></activity>
+        <activity android:name=".RegisterActivity$RegisterPenumpang"></activity>
     </application>
 
 </manifest>

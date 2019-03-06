@@ -1,24 +1,18 @@
 package com.busefisensi.efisiensiku;
 
-import android.content.ContentValues;
 import android.content.Intent;
-import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.busefisensi.efisiensiku.Fragment.BookingFragment;
 import com.busefisensi.efisiensiku.Model.PassengerModel;
 import com.busefisensi.efisiensiku.util.DatabaseHandler;
 import com.busefisensi.efisiensiku.util.User;
-
-import java.util.HashMap;
 
 
 public class RegisterActivity extends AppCompatActivity {
@@ -102,4 +96,49 @@ public class RegisterActivity extends AppCompatActivity {
 //        dbHandler.addRecord(passengerModel);
 //    }
 
+    public static class RegisterPenumpang extends AppCompatActivity {
+        EditText etNama;
+        EditText etHandphone;
+        Button btnSimpan;
+        DatabaseHandler handler = new DatabaseHandler(this);
+        PassengerModel passengerModel;
+
+        @Override
+        protected void onCreate(Bundle savedInstanceState){
+            super.onCreate(savedInstanceState);
+            setContentView(R.layout.activity_add_passenger);
+            etNama = findViewById(R.id.etRegNama);
+            etHandphone = findViewById(R.id.etRegHandphone);
+
+            btnSimpan = findViewById(R.id.btnSimpan);
+            btnSimpan.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    saveData(handler);
+                    Intent intent = new Intent(RegisterPenumpang.this, HomeActivity.class);
+                    startActivity(intent);
+                    finish();
+                }
+            });
+
+        }
+
+        public void saveData(final DatabaseHandler dbHandler){
+            passengerModel = new PassengerModel();
+
+            try {
+                String namaDepan = etNama.getText().toString().trim();
+                String handphone = etHandphone.getText().toString().trim();
+
+                passengerModel.setNama(namaDepan);
+                passengerModel.setHandhphone(handphone);
+
+                dbHandler.addRecord(passengerModel);
+                Toast.makeText(RegisterPenumpang.this, "Berhasil Didaftarkan", Toast.LENGTH_SHORT).show();
+            }
+            catch (Exception ex){
+                ex.printStackTrace();
+            }
+        }
+    }
 }

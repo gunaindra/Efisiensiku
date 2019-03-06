@@ -1,12 +1,9 @@
 package com.busefisensi.efisiensiku.Fragment;
 
-import android.app.AlertDialog;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.app.Fragment;
 import android.support.design.widget.FloatingActionButton;
-import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
@@ -20,9 +17,6 @@ import com.busefisensi.efisiensiku.Model.PassengerModel;
 import com.busefisensi.efisiensiku.R;
 import com.busefisensi.efisiensiku.RegisterActivity;
 import com.busefisensi.efisiensiku.util.DatabaseHandler;
-import com.busefisensi.efisiensiku.util.MyDividerItemDecoration;
-import com.busefisensi.efisiensiku.util.RecyclerTouchListener;
-import com.busefisensi.efisiensiku.util.RegisterPenumpang;
 import com.busefisensi.efisiensiku.util.User;
 
 import java.util.ArrayList;
@@ -63,7 +57,7 @@ public class AkunFragment extends Fragment {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), RegisterPenumpang.class);
+                Intent intent = new Intent(getActivity(), RegisterActivity.RegisterPenumpang.class);
                 startActivity(intent);
             }
         });
