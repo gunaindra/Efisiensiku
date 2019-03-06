@@ -74,7 +74,7 @@
             android:layout_height="wrap_content">
 
             <EditText
-                android:id="@+id/tvRegNamaBelakang"
+                android:id="@+id/etRegNamaBelakang"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
@@ -127,7 +127,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <EditText
-                android:id="@+id/etRegNoHandphone"
+                android:id="@+id/etRegHandphone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"

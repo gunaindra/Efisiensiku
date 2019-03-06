@@ -23,6 +23,10 @@ import com.busefisensi.efisiensiku.Fragment.AkunFragment;
 import com.busefisensi.efisiensiku.Fragment.BantuanFragment;
 import com.busefisensi.efisiensiku.Fragment.BookingFragment;
 import com.busefisensi.efisiensiku.Fragment.HistoryFragment;
+import com.busefisensi.efisiensiku.Model.PassengerModel;
+import com.busefisensi.efisiensiku.util.DatabaseHandler;
+
+import java.util.List;
 
 public class HomeActivity extends AppCompatActivity {
 
@@ -39,10 +43,10 @@ public class HomeActivity extends AppCompatActivity {
         navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
         tvToolbar = (TextView)findViewById(R.id.tvToolbar);
-
         tvToolbar.setText("Akun");
         navigation.setSelectedItemId(R.id.nav_akun);
         loadFragment(new AkunFragment());
+
 
     }
 
